@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Component</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    // Class Component
+    class JudulReact extends React.Component {
+      render() {
+        return <h1>Sedang Belajar React</h1>;
+      }
+    }
+
+    // Functional Component (Arrow Function)
+    const JudulJavaScript = () => <h1>Sedang Belajar JavaScript</h1>;
+
+    // Komponen utama gabungan
+    const MyComponent = () => {
+      return (
+        <div>
+          <JudulReact />
+          <hr />
+          <JudulJavaScript />
+        </div>
+      );
+    };
+
+    // Render ke halaman
+    ReactDOM.render(<MyComponent />, document.getElementById("root"));
+  </script>
+</body>
+</html>

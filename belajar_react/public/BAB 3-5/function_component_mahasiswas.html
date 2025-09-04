@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Mahasiswa - React</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React via CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    // Data array mahasiswa
+    const mahasiswas = [
+      { id:"01", nama: "Eka", jurusan: "Teknik Informatika", pasFoto: "people1.jpg" },
+      { id:"02", nama: "Lisa", jurusan: "Sistem Informasi", pasFoto: "people2.jpg" },
+      { id:"03", nama: "Rudi", jurusan: "Teknik Elektro", pasFoto: "people3.jpg" }
+    ];
+
+    // Komponen untuk 1 mahasiswa
+    const Mahasiswa = (props) => {
+      return (
+        <figure>
+          <img src={"img/" + props.pasFoto} alt={props.nama} width="150" />
+          <figcaption>{props.nama} ({props.jurusan})</figcaption>
+        </figure>
+      );
+    };
+
+    // Komponen daftar mahasiswa
+    const DaftarMahasiswa = () => {
+      return (
+        <React.Fragment>
+          <h1>Daftar Mahasiswa - Teknik Informatika</h1>
+          <hr />
+          <section style={{display: "flex", gap: "20px", textAlign: "center"}}>
+            {mahasiswas.map((mhs) => (
+              <Mahasiswa 
+                key={mhs.id} 
+                nama={mhs.nama} 
+                jurusan={mhs.jurusan} 
+                pasFoto={mhs.pasFoto} 
+              />
+            ))}
+          </section>
+        </React.Fragment>
+      );
+    };
+
+    // Render ke root
+    ReactDOM.render(<DaftarMahasiswa />, document.getElementById("root"));
+  </script>
+</body>
+</html>

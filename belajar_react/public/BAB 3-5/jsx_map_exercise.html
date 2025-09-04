@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabel Mahasiswa</title>
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const mahasiswas = [
+      { nama: "Yendra", umur: 16, jurusan: "Teknik Informatika" },
+      { nama: "Berkat", umur: 16, jurusan: "Sistem Informasi" },
+      { nama: "Randy", umur: 17, jurusan: "Teknik Elektro" }
+    ];
+
+    const myTable = (
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jurusan</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mahasiswas.map((mhs, index) => (
+            <tr key={index}>
+              <td>{mhs.nama}</td>
+              <td>{mhs.umur}</td>
+              <td>{mhs.jurusan}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+
+    ReactDOM.render(myTable, document.getElementById('root'));
+  </script>
+</body>
+</html>
