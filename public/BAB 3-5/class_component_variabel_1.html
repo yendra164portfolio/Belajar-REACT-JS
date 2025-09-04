@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Fragment Example</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- React & Babel -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    class MyComponent extends React.Component {
+      render() {
+        let judulReact = "Belajar React";
+        return (
+          <React.Fragment>
+            <h1>{judulReact}</h1>
+            <hr />
+            <p>Stt... lagi serius {judulReact.toLocaleLowerCase()}</p>
+          </React.Fragment>
+        );
+      }
+    }
+
+    ReactDOM.render(<MyComponent />, document.getElementById('root'));
+  </script>
+</body>
+</
