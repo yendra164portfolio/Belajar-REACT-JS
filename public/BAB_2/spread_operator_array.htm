@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread Operator</title>
+</head>
+<body>
+  <h1>Cek Console (F12)</h1>
+
+  <script>
+    let arr1 = [10, 20, 30];
+    let arr2 = [100, 200, 300];
+
+    // Gabungkan dua array
+    let arr3 = [...arr1, ...arr2];
+    console.log(arr3); 
+    // Output: [10, 20, 30, 100, 200, 300]
+
+    // Tambah elemen baru di akhir
+    let arr4 = [...arr1, 40, 50];
+    console.log(arr4); 
+    // Output: [10, 20, 30, 40, 50]
+
+    // Tambah elemen baru di depan
+    let arr5 = [30, 40, 50, ...arr1];
+    console.log(arr5); 
+    // Output: [30, 40, 50, 10, 20, 30]
+  </script>
+</body>
+</html>

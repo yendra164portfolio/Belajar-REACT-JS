@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rest Parameter</title>
+</head>
+<body>
+  <h1>Cek Console (F12)</h1>
+
+  <script>
+    // Rest parameter: ...args akan menampung semua argumen jadi array
+    function foo(...args) {
+      return args;
+    }
+
+    console.log(foo(1, 2, 3)); 
+    // Output: [1, 2, 3]
+
+    console.log(foo(3, 5, 7, 9));   
+    // Output: [3, 5, 7, 9]
+
+    console.log(foo(5, 10, 15, 20, 25, 30)); 
+    // Output: [5, 10, 15, 20, 25, 30]
+  </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kondisi di JSX</title>
+  <title>Event onClick</title>
   <!-- React & Babel -->
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -13,16 +13,11 @@
   <div id="root"></div>
 
   <script type="text/babel">
-    let nilai = 80;
-    let pesan;
-
-    if (nilai > 70) {
-      pesan = "Selamat, anda lolos";
-    } else {
-      pesan = "Maaf, silahkan coba lagi";
-    }
-
-    const myElement = <h1>{pesan}</h1>;
+    const myElement = (
+      <button onClick={() => alert("Tombol di klik")}>
+        Click me
+      </button>
+    );
 
     ReactDOM.render(myElement, document.getElementById('root'));
   </script>

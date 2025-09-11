@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar React</title>
+</head>
+<body>
+  <h1>Belajar React</h1>
+
+  <div id="root"></div>
+
+  <!-- React & ReactDOM -->
+ <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Script React -->
+  <script>
+    const myMenu = React.createElement(
+      'ul',
+      null,
+      [
+        React.createElement('li', null, 'Espresso'),
+        React.createElement('li', null, 'Cappuccino'),
+        React.createElement('li', null, 'Moccacino')
+      ]
+    );
+
+    ReactDOM.render(myMenu, document.getElementById('root'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Promise Example</title>
+</head>
+<body>
+  <h1>Cek Console (F12)</h1>
+
+  <script>
+    const getUser = () => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("Rudi");
+        }, 2000);
+      });
+    };
+
+    console.log("Start...");
+    getUser().then((userName) => console.log(userName)); 
+    console.log("Finish");
+  </script>
+</body>
+</html>

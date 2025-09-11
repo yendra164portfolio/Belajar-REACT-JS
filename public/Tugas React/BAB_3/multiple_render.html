@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar React</title>
+</head>
+<body>
+  <h1>Belajar React</h1>
+
+  <!-- Root untuk React -->
+  <div id="root"></div>
+  <div id="foo"></div>
+
+  <!-- React & ReactDOM -->
+ <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <!-- Script React -->
+  <script>
+    // Elemen teks
+    const myElement = React.createElement('h1', null, 'Hello React');
+    ReactDOM.render(myElement, document.getElementById('root'));
+
+    // Elemen gambar
+    const myPic = React.createElement('img', { src: 'img/landak.jpg', alt: 'Landak' });
+    ReactDOM.render(myPic, document.getElementById('foo'));
+  </script>
+</body>
+</html>

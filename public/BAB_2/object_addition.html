@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Mahasiswa</title>
+</head>
+<body>
+  <h1>Cek Console (F12)</h1>
+
+  <script>
+    let mahasiswa = {
+      nama: "Eka",
+      umur: 19,
+      jurusan: "Teknik Informatika",
+      getInfo() {
+        return `${this.nama} (${this.umur} tahun) dari jurusan ${this.jurusan}`;
+      }
+    }
+
+    console.log(mahasiswa);
+    // {nama: "Eka", umur: 19, jurusan: "Teknik Informatika", getInfo: ƒ}
+
+    // Update properti umur
+    mahasiswa.umur = 20;
+    // Tambahkan properti baru
+    mahasiswa.tempatLahir = "Jakarta";
+
+    console.log(mahasiswa);
+    // {nama: "Eka", umur: 20, jurusan: "Teknik Informatika", tempatLahir: "Jakarta", getInfo: ƒ}
+
+    // Akses method getInfo
+    console.log(mahasiswa.getInfo());
+    // Output: Eka (20 tahun) dari jurusan Teknik Informatika
+  </script>
+</body>
+</html>

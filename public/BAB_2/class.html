@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Belajar Class JavaScript</title>
+</head>
+<body>
+  <h1>Cek Console (F12)</h1>
+
+  <script>
+    class Laptop {
+      constructor(milik, merk) {
+        this.milik = milik;
+        this.merk = merk;
+      }
+
+      hidupkanLaptop() {
+        return `Hidupkan laptop ${this.merk} milik ${this.milik}`;
+      }
+    }
+
+    let laptopRudi = new Laptop("Rudi", "Asus");
+
+    console.log(laptopRudi.merk);            // Asus
+    console.log(laptopRudi.milik);           // Rudi
+    console.log(laptopRudi.hidupkanLaptop()); // Hidupkan laptop Asus milik Rudi
+  </script>
+</body>
+</html>
